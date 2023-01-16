@@ -40,8 +40,11 @@ const anyChange = () => {
     const timeStamp = date.getFullYear() + String(date.getMonth() + 1).padStart(2, '0') + String(date.getDate()).padStart(2, '0') + date.getHours() + date.getMinutes() + date.getSeconds();
 
     chrome.storage.sync.get(['emailDomain', 'emailPrefix'], function(result) {
+
+        let emailPrefix = result.emailPrefix ? result.emailPrefix : "";
+        let emailDomain = result.emailDomain ? result.emailDomain : "gmail.com";
     
-        const testEmail = result.emailPrefix + timeStamp + "@" + result.emailDomain;
+        const testEmail = emailPrefix + timeStamp + "@" + emailDomain;
 
         document.querySelector('#example').innerText = testEmail;
         
