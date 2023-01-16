@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testy McTest</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Testy McTest</h1>
+            <h3 class="subtitle">Unique email generator.</h3>
+        </div>
+        <h4 class="customiseHeader">CUSTOMISE</h4>
+        <div class="options">
+            <div class="option">
+                <label for="emailPrefix">Email Prefix</label>
+                <input type="text" name="emailPrefix" id="emailPrefix"/>
+            </div>
+            <div class="option">
+                <label for="domain">Domain</label>
+                <select id="domain">
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="outlook.com">outlook.com</option>
+                    <option value="yahoo.com">yahoo.com</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+            <div class="option" id="customDomainWrapper">
+                <label for="customDomain">Custom Domain</label>
+                <input type="text" name="customDomain" id="customDomain"/>
+            </div>
+        </div>
+        <h4 class="customiseHeader exampleHeader">EXAMPLE</h4>
+        <div id="example" class="options exampleWrapper"></div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
